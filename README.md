@@ -15,8 +15,7 @@ $ pip install -r requirements.txt
 
 Run the blockchain node instance:
 ```sh
-$ export FLASK_APP=node.py
-$ flask run --port 5001
+$ FLASK_APP=node.py flask run --port 5001
 ```
 
 Run the REST API server:
@@ -28,3 +27,6 @@ View the node's copy of the chain:
 ```sh
 $ curl http://127.0.0.1:5000/chain
 ```
+
+## Dependencies
+[Flask](https://github.com/pallets/flask)
