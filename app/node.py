@@ -1,10 +1,12 @@
 from hashlib import sha256
 import json
 import time
-class Block:
+from flask import Flask, request
+import requests
 
+class Block:
     def __init__(self, idx, trx, timestamp, prev_hash):
-        self.idx = []
+        self.idx = idx
         self.trx = trx
         self.timestamp = timestamp
         self.prev_hash = prev_hash
@@ -75,4 +77,4 @@ class Blockchain:
         return new_block.idx
 
 
-# TODO: Add a lil twist to the app by taking from other tuts
+app = Flask(__name__)
